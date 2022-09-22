@@ -13,6 +13,7 @@ import {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/re-arco-admin/",
   plugins: [
     vue(),
     vueJsx(),
