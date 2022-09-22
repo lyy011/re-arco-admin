@@ -1,4 +1,4 @@
-name: package
+name: pages
 
 on:
   push:
@@ -26,3 +26,9 @@ jobs:
       run: |
         npm install
         npm run build
+    
+    - name: Deploy   # 部署
+      uses: JamesIves/github-pages-deploy-action@v4.4.0
+      with:
+        branch: github-pages
+        folder: dist
