@@ -5,7 +5,6 @@ export default function useRangePicker(
 ) {
   const rangeValue = computed({
     get: () => {
-      console.log(starDate.value);
       if (starDate.value && endDate.value) {
         return [starDate.value, endDate.value];
       }

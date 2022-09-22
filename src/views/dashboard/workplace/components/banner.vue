@@ -1,10 +1,8 @@
 <template>
   <a-col class="banner">
-    <a-col :span="8">
-      <a-typography-title :heading="5" style="margin-top: 0">
-        欢迎回来！ {{ userInfo.name }}
-      </a-typography-title>
-    </a-col>
+    <a-typography-title :heading="5" style="margin-top: 0">
+      欢迎回来！ {{ userInfo.name }}
+    </a-typography-title>
     <a-divider class="panel-border" />
   </a-col>
 </template>

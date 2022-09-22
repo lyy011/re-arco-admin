@@ -4,10 +4,22 @@ import type { Options } from "@/types/global";
 export const EnableStatus: Options<string>[] = [
   {
     value: "0",
-    label: "已禁用",
+    label: "禁用",
   },
   {
     value: "1",
-    label: "已启用",
+    label: "启用",
+  },
+];
+
+// 隐藏/显示
+export const DisplayStatus: Options<string>[] = [
+  {
+    value: "0",
+    label: "隐藏",
+  },
+  {
+    value: "1",
+    label: "显示",
   },
 ];

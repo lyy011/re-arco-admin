@@ -15,7 +15,7 @@ const DASHBOARD: RouteRecordRaw = {
     {
       path: "user",
       name: "user",
-      component: () => import("@/views/info/article/index.vue"),
+      component: () => import("@/views/system/user/index.vue"),
       meta: {
         title: "用户管理",
         requiresAuth: true,
@@ -25,7 +25,7 @@ const DASHBOARD: RouteRecordRaw = {
     {
       path: "role",
       name: "role",
-      component: () => import("@/views/info/article/index.vue"),
+      component: () => import("@/views/system/role/index.vue"),
       meta: {
         title: "角色管理",
         requiresAuth: true,
@@ -33,11 +33,21 @@ const DASHBOARD: RouteRecordRaw = {
       },
     },
     {
-      path: "column",
-      name: "column",
-      component: () => import("@/views/info/article/index.vue"),
+      path: "menu",
+      name: "menu",
+      component: () => import("@/views/system/menu/index.vue"),
       meta: {
-        title: "栏目管理",
+        title: "菜单管理",
+        requiresAuth: true,
+        roles: ["*"],
+      },
+    },
+    {
+      path: "setting",
+      name: "setting",
+      component: () => import("@/views/system/setting/index.vue"),
+      meta: {
+        title: "平台设置",
         requiresAuth: true,
         roles: ["*"],
       },

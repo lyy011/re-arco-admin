@@ -13,26 +13,6 @@ const DASHBOARD: RouteRecordRaw = {
   },
   children: [
     {
-      path: "notice",
-      name: "notice",
-      component: () => import("@/views/info/article/index.vue"),
-      meta: {
-        title: "公告管理",
-        requiresAuth: true,
-        roles: ["*"],
-      },
-    },
-    {
-      path: "/info/mailbox",
-      name: "mailbox",
-      component: () => import("@/views/info/article/index.vue"),
-      meta: {
-        title: "行长信箱",
-        requiresAuth: true,
-        roles: ["*"],
-      },
-    },
-    {
       path: "article",
       name: "article",
       meta: {
@@ -73,26 +53,6 @@ const DASHBOARD: RouteRecordRaw = {
           component: () => import("@/views/info/article/add.vue"),
         },
       ],
-    },
-    {
-      path: "comment",
-      name: "comment",
-      component: () => import("@/views/info/article/index.vue"),
-      meta: {
-        title: "评论管理",
-        requiresAuth: true,
-        roles: ["*"],
-      },
-    },
-    {
-      path: "drafts",
-      name: "drafts",
-      component: () => import("@/views/info/article/index.vue"),
-      meta: {
-        title: "草稿箱",
-        requiresAuth: true,
-        roles: ["*"],
-      },
     },
   ],
 };

@@ -18,6 +18,24 @@ const data: Record<string, any> = {
       label: "图文",
     },
   ],
+  columnOpts: [
+    {
+      value: "1",
+      label: "生活",
+    },
+    {
+      value: "2",
+      label: "美食",
+    },
+    {
+      value: "3",
+      label: "科技",
+    },
+    {
+      value: "4",
+      label: "游戏",
+    },
+  ],
 };
 
 setupMock({

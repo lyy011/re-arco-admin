@@ -41,7 +41,11 @@
           </template>
           <Menu />
         </a-drawer>
-        <a-layout class="layout-content" :style="paddingStyle">
+        <a-layout
+          class="layout-content"
+          id="layout-content"
+          :style="paddingStyle"
+        >
           <TabBar v-if="appStore.tabBar" />
           <a-layout-content>
             <PageLayout />

@@ -2,7 +2,7 @@
  * @Author: Lyy
  * @Date: 2022-09-05 14:07:22
  * @LastEditor: Lyy
- * @LastEditTime: 2022-09-05 15:37:13
+ * @LastEditTime: 2022-09-20 16:18:30
  * @Description: 数据字典
  */
 
@@ -17,6 +17,7 @@ interface DictOption {
 }
 export function useDictFromServer(dictKey: string, option?: DictOption) {
   const dictList = ref<Options<string>[]>([]);
+
   const loading = ref(false);
 
   const setDictList = async () => {
@@ -37,13 +38,13 @@ export function useDictFromServer(dictKey: string, option?: DictOption) {
   };
 
   const dictLabelMap = computed(() => {
-    const obj: Record<string, string> = {};
-    dictList.value.forEach((o) => {
+    return dictList.value.reduce((dist: Record<string, string>, o) => {
+      const obj = dist;
       if (o.value) {
-        obj[`${o.value}`] = `${o.label}`;
+        obj[o.value] = o.label;
       }
-    });
-    return obj;
+      return obj;
+    }, {});
   });
 
   setDictList();
@@ -55,20 +56,21 @@ export function useDictFromServer(dictKey: string, option?: DictOption) {
   };
 }
 
-export function useDict<T>(data: Options<string>[], option?: DictOption) {
+export function useDict(data: Options<string>[], option?: DictOption) {
   const dictList = ref(
     option?.all && data.length > 0 ? allSelectItem.concat(data) : data
   );
 
-  const dictLabelMap = computed(() => {
-    const obj: Record<string, string> = {};
-    dictList.value.forEach((o) => {
+  const dictLabelMap = dictList.value.reduce(
+    (dist: Record<string, string>, o) => {
+      const obj = dist;
       if (o.value) {
-        obj[`${o.value}`] = `${o.label}`;
+        obj[o.value] = o.label;
       }
-    });
-    return obj;
-  });
+      return obj;
+    },
+    {}
+  );
 
   return {
     dictList,

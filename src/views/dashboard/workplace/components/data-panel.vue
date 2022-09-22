@@ -2,7 +2,7 @@
   <a-grid :cols="24" :row-gap="16" class="panel">
     <a-grid-item
       class="panel-col"
-      :span="{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12, xxl: 6 }"
+      :span="{ xs: 24, sm: 12, md: 12, lg: 12, xl: 12, xxl: 6 }"
     >
       <a-space>
         <a-avatar :size="54" class="col-avatar">
@@ -25,7 +25,7 @@
     </a-grid-item>
     <a-grid-item
       class="panel-col"
-      :span="{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12, xxl: 6 }"
+      :span="{ xs: 24, sm: 12, md: 12, lg: 12, xl: 12, xxl: 6 }"
     >
       <a-space>
         <a-avatar :size="54" class="col-avatar">
@@ -49,7 +49,7 @@
     </a-grid-item>
     <a-grid-item
       class="panel-col"
-      :span="{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12, xxl: 6 }"
+      :span="{ xs: 24, sm: 12, md: 12, lg: 12, xl: 12, xxl: 6 }"
     >
       <a-space>
         <a-avatar :size="54" class="col-avatar">
@@ -73,7 +73,7 @@
     </a-grid-item>
     <a-grid-item
       class="panel-col"
-      :span="{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12, xxl: 6 }"
+      :span="{ xs: 24, sm: 12, md: 12, lg: 12, xl: 12, xxl: 6 }"
       style="border-right: none"
     >
       <a-space>
